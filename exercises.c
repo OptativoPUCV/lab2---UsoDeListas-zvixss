@@ -63,7 +63,7 @@ int sumaLista(List *lista)
 {
   int suma = 0;
   int *dato;
-  dato = (int*)first(lista);
+  dato = (int*)first(lista); 
   while(dato != NULL)
   {
     suma += *dato;
@@ -80,7 +80,6 @@ de la lista que sean iguales a elem.
 Asume que popCurrent luego de eliminar un elemento se
 posiciona en el elemento anterior.
 */
-
 void eliminaElementos(List*L, int elem)
 {
   int *dato;
@@ -95,6 +94,7 @@ void eliminaElementos(List*L, int elem)
     }
 }
 
+
 /*
 Ejercicio 4.
 La función copia los punteros de la pila P1 en la pila P2.
@@ -102,10 +102,20 @@ El orden de ambas pilas se debe mantener.
 Puedes usar una pila auxiliar.
 */
 
-void copia_pila(Stack* P1, Stack* P2) 
+void copia_pila(Stack* P1, Stack* P2)
 {
-  
+  Stack* p3 = create_stack();
+  while (first(P1) != NULL)
+    {
+      push(p3, pop(P1));
+    }
+  while (first(p3) != NULL)
+    {
+      push(P2, top(p3));
+      push(P1, pop(p3));
+    }
 }
+
 
 /*
 Ejercicio 5.
