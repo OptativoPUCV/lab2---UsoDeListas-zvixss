@@ -144,11 +144,11 @@ int parentesisBalanceados(char cadena)
         else
         {
           char* caracter = top(stack);
-          if ((cadena[contador] == ')' && caracter == '('))
+          if ((cadena[contador] == ')' && *caracter == '('))
           {
             pop(stack);
           }
-          else if ((cadena[contador] == '}' &&caracter == '{'))
+          else if ((cadena[contador] == '}' && *caracter == '{'))
           {
             pop(stack);
           }
