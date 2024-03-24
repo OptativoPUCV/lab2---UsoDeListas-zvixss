@@ -218,3 +218,16 @@ exercises.c:127:32: note: expected ‘char’ but argument is of type ‘char *�
 cc1: all warnings being treated as errors
 Compilation failed
 6e97e36
+Sun 24 Mar 2024 12:15:11 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:134:29: error: called object is not a function or function pointer
+  134 |       if ((cadena[contador] == '(')  (cadena[contador] == '{')  (cadena[contador] == '['))
+      |           ~~~~~~~~~~~~~~~~~~^~~~~~~
+exercises.c:138:34: error: called object is not a function or function pointer
+  138 |       else if ((cadena[contador] == ')')  (cadena[contador] == '}')  (cadena[contador] == ']'))
+      |                ~~~~~~~~~~~~~~~~~~^~~~~~~
+Compilation failed
+fb4c46d
